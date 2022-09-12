@@ -638,6 +638,47 @@
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
+        <form class="modal-form" name="modal-form" autocomplete="on">
+          <label class="modal-label">
+            Ім'я
+            <input class="modal-imput" type="text" name="clientname" />
+          </label>
+          <label class="modal-label">
+            Телефон
+            <input class="modal-imput" type="tel" name="tel" />
+          </label>
+          <label class="modal-label">
+            Пошта
+            <input class="modal-imput" type="email" name="email" />
+          </label>
+          <label class="modal-label">
+            Коментар
+            <textarea
+              class="modal-textarea"
+              name="comment"
+              cols="30"
+              rows="10"
+              placeholder="Введіть текст"
+            >
+            </textarea>
+          </label>
+          <div class="checkbox-container">
+            <label class="modal-label">
+              <imput class="modal-checkbox"></imput>
+            </label>
+            <p class="checkbox-text">
+              Погоджуюся з розсилкою та приймаю
+              <a
+                href="#"
+                class="checkbox-link link"
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+                >Умови договору</a
+              >
+            </p>
+          </div>
+          <button class="modal-submit-btn" type="submit">Відправити</button>
+        </form>
       </div>
     </div>
 

@@ -639,44 +639,47 @@
           </svg>
         </button>
         <form class="modal-form" name="modal-form" autocomplete="on">
+          <h3 class="modal-form-title">Залиште свої дані, ми вам передзвонимо</h3>
           <label class="modal-label">
-            Ім'я
+            <span class="modal-label-name">Ім'я</span>
             <input class="modal-imput" type="text" name="clientname" />
+            <svg class="modal-form-icon">
+              <use href="./images/sprite.svg#form-1"></use>
+            </svg>
           </label>
           <label class="modal-label">
-            Телефон
+            <span class="modal-label-name">Телефон</span>
             <input class="modal-imput" type="tel" name="tel" />
+            <svg class="modal-form-icon">
+              <use href="./images/sprite.svg#form-2"></use>
+            </svg>
           </label>
           <label class="modal-label">
-            Пошта
+            <span class="modal-label-name">Пошта</span>
             <input class="modal-imput" type="email" name="email" />
+            <svg class="modal-form-icon">
+              <use href="./images/sprite.svg#form-3"></use>
+            </svg>
           </label>
           <label class="modal-label">
-            Коментар
-            <textarea
-              class="modal-textarea"
-              name="comment"
-              cols="30"
-              rows="10"
-              placeholder="Введіть текст"
-            >
-            </textarea>
+            <span class="modal-label-name">Коментар</span>
+            <textarea class="modal-textarea" name="comment" rows="5" placeholder="Введіть текст"></textarea>
           </label>
-          <div class="checkbox-container">
-            <label class="modal-label">
-              <imput class="modal-checkbox"></imput>
-            </label>
-            <p class="checkbox-text">
+          <label class="modal-checkbox-label"> 
+            <input class="modal-checkbox visually-hidden" type="checkbox" name="license"></input>
+            <span class="checkbox-field"></span>
+            <span class="checkbox-text">
               Погоджуюся з розсилкою та приймаю
               <a
                 href="#"
-                class="checkbox-link link"
+                class="checkbox-link"
                 target="_blank"
                 rel="noreferrer noopener nofollow"
                 >Умови договору</a
               >
-            </p>
-          </div>
+            </span>
+          </label>
+
           <button class="modal-submit-btn" type="submit">Відправити</button>
         </form>
       </div>

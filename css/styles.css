@@ -21,6 +21,7 @@
   --header-line-color: #ececec;
   --portfolio-border: #eeeeee;
   --social-icons-color: #afb1b8;
+  --modal-header-color: #212121;
   /* ========= text settings ======================== */
   --main-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
@@ -296,11 +297,16 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  transition: border var(--animation-time) var(--time-function);
 }
 .footer-imput::placeholder {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
+}
+.footer-imput:focus {
+  border: 1px solid var(--text-and-button-accent);
 }
 .footer-form-btn {
   display: flex;
@@ -605,8 +611,133 @@ button {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-}
 
+  color: var(--modal-header-color);
+  transition: color var(--animation-time) var(--time-function);
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  color: var(--text-and-button-accent);
+}
+.modal-icon {
+  fill: currentColor;
+}
+/*----------------------------- форма модалки --------------------------*/
+.modal-form {
+  margin: 40px;
+}
+.modal-form-title {
+  margin-bottom: 12px;
+  padding: 0;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  color: var(--modal-header-color);
+}
+.modal-label {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+.modal-label-name {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+.modal-imput {
+  display: block;
+  width: 450px;
+  padding: 12px 12px 12px 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  color: var(--modal-header-color);
+  transition: border var(--animation-time) var(--time-function);
+}
+.modal-textarea {
+  display: block;
+  width: 450px;
+  height: 120px;
+  resize: none;
+
+  padding: 12px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border var(--animation-time) var(--time-function);
+}
+.modal-imput:focus,
+.modal-textarea:focus {
+  border: 1px solid var(--text-and-button-accent);
+}
+.modal-form-icon {
+  position: absolute;
+  top: 45%;
+  left: 12px;
+
+  width: 18px;
+  height: 18px;
+
+  fill: var(--modal-header-color);
+  transition: color var(--animation-time) var(--time-function);
+}
+.modal-imput:focus ~ .modal-form-icon {
+  fill: var(--text-and-button-accent);
+}
+.modal-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-checkbox-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 30px;
+}
+.checkbox-text {
+  line-height: 1.7;
+}
+.checkbox-link {
+  color: var(--text-and-button-accent);
+}
+.checkbox-field {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+
+  border: 3px solid #212121;
+  border-radius: 2px;
+}
+.modal-checkbox:checked ~ .checkbox-field {
+  background-image: url(../images/icon-check.svg);
+  background-size: cover;
+  background-position: center;
+  background-origin: border-box;
+  border-color: var(--text-and-button-accent);
+}
+.modal-submit-btn {
+  padding: 10px 52px;
+  background-color: var(--text-and-button-accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--effects-text);
+}
 /* ========================== кінець модального вікна ====================== */
 
 /* ========================= portfolio page =================================*/

@@ -275,8 +275,9 @@ button {
   fill: currentColor;
 }
 
-.footer-form {
-  margin-left: 93px;
+/*------------------------------ footer form ---------------------------*/
+.footer-form-container {
+  margin-left: auto;
 }
 .footer-form-name {
   margin-bottom: 20px;
@@ -291,12 +292,14 @@ button {
   gap: 12px;
 }
 .footer-imput {
-  width: 360px;
+  width: 358px;
   padding: 15px;
   background-color: var(--footer-bcg-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  color: #ffffff;
 
   transition: border var(--animation-time) var(--time-function);
 }
@@ -583,6 +586,7 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 40px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--animation-time) var(--time-function);
 
@@ -623,9 +627,6 @@ button {
   fill: currentColor;
 }
 /*----------------------------- форма модалки --------------------------*/
-.modal-form {
-  margin: 40px;
-}
 .modal-form-title {
   margin-bottom: 12px;
   padding: 0;
@@ -642,6 +643,7 @@ button {
   margin-bottom: 10px;
 }
 .modal-label-name {
+  display: block;
   margin-bottom: 4px;
 
   font-size: 12px;
@@ -651,13 +653,20 @@ button {
 .modal-imput {
   display: block;
   width: 450px;
+  height: 40px;
   padding: 12px 12px 12px 42px;
 
+  outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   color: var(--modal-header-color);
   transition: border var(--animation-time) var(--time-function);
+}
+.modal-textarea-label {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
 }
 .modal-textarea {
   display: block;
@@ -672,13 +681,13 @@ button {
   border-radius: 4px;
   transition: border var(--animation-time) var(--time-function);
 }
-.modal-imput:focus,
-.modal-textarea:focus {
+.modal-imput:focus-within,
+.modal-textarea:focus-within {
   border: 1px solid var(--text-and-button-accent);
 }
 .modal-form-icon {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 12px;
 
   width: 18px;
@@ -687,7 +696,7 @@ button {
   fill: var(--modal-header-color);
   transition: color var(--animation-time) var(--time-function);
 }
-.modal-imput:focus ~ .modal-form-icon {
+.modal-imput:focus + .modal-form-icon {
   fill: var(--text-and-button-accent);
 }
 .modal-textarea::placeholder {

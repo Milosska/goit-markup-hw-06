@@ -615,10 +615,11 @@
             </li>
           </ul>
         </div>
-        <form class="footer-form" name="footer-form" autocomplete="on">
+<div class="footer-form-container">
           <p class="footer-form-name">Підпишіться на розсилку</p>
-          <label class="footer-label">
-            <input class="footer-imput" name="email" type="email" placeholder="E-mail" />
+        <form class="footer-form" name="footer-form" autocomplete="on">
+                    <label class="footer-label">
+            <input class="footer-imput" name="email" type="email" placeholder="E-mail" required />
             <button class="footer-form-btn" type="submit">
               Підписатися
               <svg class="footer-form-icon">
@@ -627,6 +628,7 @@
             </button>
           </label>
         </form>
+</div>
       </div>
     </footer>
 
@@ -639,34 +641,34 @@
           </svg>
         </button>
         <form class="modal-form" name="modal-form" autocomplete="on">
-          <h3 class="modal-form-title">Залиште свої дані, ми вам передзвонимо</h3>
+          <p class="modal-form-title">Залиште свої дані, ми вам передзвонимо</p>
           <label class="modal-label">
             <span class="modal-label-name">Ім'я</span>
-            <input class="modal-imput" type="text" name="clientname" />
+            <input class="modal-imput" type="text" name="clientname" required/>
             <svg class="modal-form-icon">
               <use href="./images/sprite.svg#form-1"></use>
             </svg>
           </label>
           <label class="modal-label">
             <span class="modal-label-name">Телефон</span>
-            <input class="modal-imput" type="tel" name="tel" />
+            <input class="modal-imput" type="tel" name="tel" required/>
             <svg class="modal-form-icon">
               <use href="./images/sprite.svg#form-2"></use>
             </svg>
           </label>
           <label class="modal-label">
             <span class="modal-label-name">Пошта</span>
-            <input class="modal-imput" type="email" name="email" />
+            <input class="modal-imput" type="email" name="email" required/>
             <svg class="modal-form-icon">
               <use href="./images/sprite.svg#form-3"></use>
             </svg>
           </label>
-          <label class="modal-label">
+          <label class="modal-textarea-label">
             <span class="modal-label-name">Коментар</span>
             <textarea class="modal-textarea" name="comment" rows="5" placeholder="Введіть текст"></textarea>
           </label>
           <label class="modal-checkbox-label"> 
-            <input class="modal-checkbox visually-hidden" type="checkbox" name="license"></input>
+            <input class="modal-checkbox visually-hidden" type="checkbox" name="license" required></input>
             <span class="checkbox-field"></span>
             <span class="checkbox-text">
               Погоджуюся з розсилкою та приймаю

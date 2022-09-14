@@ -295,13 +295,15 @@ button {
   width: 358px;
   padding: 15px;
   background-color: var(--footer-bcg-color);
+
+  outline: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 
   color: #ffffff;
 
-  transition: border var(--animation-time) var(--time-function);
+  transition: border-color var(--animation-time) var(--time-function);
 }
 .footer-imput::placeholder {
   font-size: 16px;
@@ -661,7 +663,7 @@ button {
   border-radius: 4px;
 
   color: var(--modal-header-color);
-  transition: border var(--animation-time) var(--time-function);
+  transition: border-color var(--animation-time) var(--time-function);
 }
 .modal-textarea-label {
   position: relative;
@@ -677,9 +679,10 @@ button {
   padding: 12px;
   margin-bottom: 20px;
 
+  outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: border var(--animation-time) var(--time-function);
+  transition: border-color var(--animation-time) var(--time-function);
 }
 .modal-imput:focus-within,
 .modal-textarea:focus-within {
@@ -694,7 +697,7 @@ button {
   height: 18px;
 
   fill: var(--modal-header-color);
-  transition: color var(--animation-time) var(--time-function);
+  transition: fill var(--animation-time) var(--time-function);
 }
 .modal-imput:focus + .modal-form-icon {
   fill: var(--text-and-button-accent);
@@ -733,7 +736,7 @@ button {
   background-size: cover;
   background-position: center;
   background-origin: border-box;
-  border-color: var(--text-and-button-accent);
+  border-color: transparent;
 }
 .modal-submit-btn {
   padding: 10px 52px;

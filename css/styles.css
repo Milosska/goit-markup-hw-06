@@ -310,7 +310,8 @@ button {
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
 }
-.footer-imput:focus {
+.footer-imput:focus,
+.footer-imput:focus-within {
   border: 1px solid var(--text-and-button-accent);
 }
 .footer-form-btn {
@@ -685,7 +686,9 @@ button {
   transition: border-color var(--animation-time) var(--time-function);
 }
 .modal-imput:focus-within,
-.modal-textarea:focus-within {
+.modal-imput:hover,
+.modal-textarea:focus-within,
+.modal-textarea:hover {
   border: 1px solid var(--text-and-button-accent);
 }
 .modal-form-icon {
@@ -699,7 +702,8 @@ button {
   fill: var(--modal-header-color);
   transition: fill var(--animation-time) var(--time-function);
 }
-.modal-imput:focus + .modal-form-icon {
+.modal-imput:focus-within + .modal-form-icon,
+.modal-imput:hover + .modal-form-icon {
   fill: var(--text-and-button-accent);
 }
 .modal-textarea::placeholder {
@@ -727,16 +731,25 @@ button {
   display: inline-block;
   width: 16px;
   height: 16px;
+  padding: 0;
+  margin: 0;
 
   border: 3px solid #212121;
   border-radius: 2px;
+
+  transition: border-color var(--animation-time) var(--time-function),
+    background-image var(--animation-time) var(--time-function);
+}
+.checkbox-field:hover,
+.checkbox-field:focus {
+  border-color: var(--text-and-button-accent);
 }
 .modal-checkbox:checked ~ .checkbox-field {
   background-image: url(../images/icon-check.svg);
   background-size: cover;
   background-position: center;
   background-origin: border-box;
-  border-color: transparent;
+  border-color: var(--text-and-button-accent);
 }
 .modal-submit-btn {
   padding: 10px 52px;
